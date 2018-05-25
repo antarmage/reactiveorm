@@ -1,0 +1,24 @@
+<form [formGroup]="ngFormGroup">
+  <input
+    type="text"
+    name="fullName"
+    formControlName="fullName"
+    placeholder="Full Name"
+  />
+  <input
+    type="text"
+    name="email"
+    formControlName="email"
+    placeholder="your@domain.com"
+  />
+  <input
+    type="text"
+    name="primaryContact"
+    formControlName="primaryContact"
+    placeholder="0-000-000-000"
+  />
+  <button
+    type="button"
+    [disabled]="!ngFormGroup.valid"
+  > Submit</button>
+</form>
